@@ -1,3 +1,5 @@
+installebpf.sh ( ubuntu )
+
 apt update
 apt install -y software-properties-common ca-certificates
 add-apt-repository -y universe
@@ -9,7 +11,7 @@ apt install -y build-essential clang llvm pkg-config \
 
 apt install -y \
   build-essential make gcc g++ pkg-config \
-  git autoconf automake libtool
+  git autoconf automake libtool git
 
 cat >/etc/apt/sources.list.d/jammy-kernel.list <<'EOF'
 deb http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
@@ -46,7 +48,12 @@ apt install -y tshark
 
 apt install -y python3 python3-pip
 #pip3 install --no-cache-dir flask prometheus-client
-python3 -m pip install --break-system-packages flask prometheus-client gdown
+python3 -m pip install --break-system-packages flask prometheus-client
+
+
+#python3 -m pip install --break-system-packages gdown
+
+git clone https://github.com/yassir63/ebpf5g.git
 
 cd /opt/oai-gnb
 git clone --depth 1 https://github.com/libbpf/libbpf
@@ -65,7 +72,7 @@ cd /opt/oai-gnb
 bpftool btf dump file /sys/kernel/btf/vmlinux format c > vmlinux.h
 
 
-gdown --folder https://drive.google.com/drive/folders/1KmwoEt4HzlSvWlSLglPk1UJXdwf6Sx0-?usp=sharing
+#gdown --folder https://drive.google.com/drive/folders/1KmwoEt4HzlSvWlSLglPk1UJXdwf6Sx0-?usp=sharing
 
 
 echo "✅ Ubuntu setup complete: headers, toolchain, libbpf, clang/llvm, json-c, tshark, and Python packages."
