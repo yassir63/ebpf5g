@@ -23,8 +23,6 @@ cd libbpf/src
 make install
 
 
-git clone https://github.com/yassir63/ebpf5g.git
-
 # Clone, build, and install bpftool
 #cd /ueransim
 cd /opt/oai-gnb
