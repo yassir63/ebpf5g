@@ -53,8 +53,6 @@ python3 -m pip install --break-system-packages flask prometheus-client
 
 #python3 -m pip install --break-system-packages gdown
 
-git clone https://github.com/yassir63/ebpf5g.git
-
 cd /opt/oai-gnb
 git clone --depth 1 https://github.com/libbpf/libbpf
 cd libbpf/src
