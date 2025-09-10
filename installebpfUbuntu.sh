@@ -48,8 +48,10 @@ apt install -y tshark
 
 apt install -y python3 python3-pip
 #pip3 install --no-cache-dir flask prometheus-client
-python3 -m pip install --break-system-packages flask prometheus-client
+#python3 -m pip install --break-system-packages flask prometheus-client
 
+python3 -m pip install --break-system-packages --ignore-installed \
+  blinker==1.9.0 jinja2==3.1.6 werkzeug==3.1.3 flask==3.1.2
 
 #python3 -m pip install --break-system-packages gdown
 
