@@ -9,7 +9,7 @@ dnf config-manager --set-enabled devel
 
 dnf install libbpf-devel -y
 dnf groupinstall "Development Tools" -y
-dnf install llvm-devel clang-devel -y
+dnf install llvm-devel clang-devel git -y
 
 dnf install -y json-c json-c-devel
 dnf install wireshark-cli -y
@@ -22,6 +22,8 @@ git clone --depth 1 https://github.com/libbpf/libbpf
 cd libbpf/src
 make install
 
+
+git clone https://github.com/yassir63/ebpf5g.git
 
 # Clone, build, and install bpftool
 #cd /ueransim
