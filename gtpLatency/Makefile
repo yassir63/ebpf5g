@@ -49,8 +49,7 @@ run: all
 	@echo "   Handle:    $(HANDLE)"
 	@echo "   Priority:  $(PRIO)"
 	@echo "   TEIDs:     $(TEIDS)"
-	IFS=' ' read -r -a teid_array <<< "$$TEIDS";
-	exec ./$(USER_BIN) $(IFACE) --prio $(PRIO) --handle $(HANDLE) $${teid_array[@]}
+	exec ./$(USER_BIN) $(IFACE) --prio $(PRIO) --handle $(HANDLE) $(TEIDS)
 
 
 # Clean up filters and qdisc
