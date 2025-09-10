@@ -13,7 +13,10 @@ dnf install llvm-devel clang-devel git -y
 
 dnf install -y json-c json-c-devel
 dnf install wireshark-cli -y
-pip install flask prometheus-client
+#pip install flask prometheus-client
+
+python3 -m pip install --break-system-packages --ignore-installed \
+  blinker==1.9.0 jinja2==3.1.6 werkzeug==3.1.3 flask==3.1.2
 
 # Clone and install libbpf
 #cd /ueransim
