@@ -1,5 +1,3 @@
-installebpf.sh ( ubuntu )
-
 apt update
 apt install -y software-properties-common ca-certificates
 add-apt-repository -y universe
