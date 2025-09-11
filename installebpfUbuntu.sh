@@ -49,7 +49,7 @@ apt install -y python3 python3-pip
 #python3 -m pip install --break-system-packages flask prometheus-client
 
 python3 -m pip install --break-system-packages --ignore-installed \
-  blinker==1.9.0 jinja2==3.1.6 werkzeug==3.1.3 flask==3.1.2 prometheus-client
+  blinker==1.9.0 jinja2==3.1.6 werkzeug==3.1.3 flask==3.1.2 prometheus-client packaging
 
 #python3 -m pip install --break-system-packages gdown
 
